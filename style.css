@@ -1,0 +1,111 @@
+/* Background */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Glass Container */
+.container {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Grid */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Cells */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Glow */
+.cell:hover {
+  transform: scale(1.1);
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px cyan;
+}
+
+/* Click Animation */
+.cell:active {
+  transform: scale(0.95);
+}
+
+/* Status Text */
+#status {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  min-height: 30px;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #22c55e, #4ade80);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #22c55e;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cell.X {
+  color: #22c55e;
+  text-shadow: 0 0 10px #22c55e;
+}
+
+.cell.O {
+  color: #3b82f6;
+  text-shadow: 0 0 10px #3b82f6;
+}
